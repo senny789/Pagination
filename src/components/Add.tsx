@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router";
 import { useState } from "react";
 import { Box, Input, FormLabel, FormControl, Heading } from "@chakra-ui/react";
 interface props {
@@ -16,6 +17,7 @@ interface props {
 }
 export const Add: React.FC<props> = (props) => {
   const [formData, setFormData] = useState<any>({});
+  const navigate = useNavigate();
   const handleChange = (e: any) => {
     let name = e.target.name;
     let value = e.target.value;
@@ -62,6 +64,8 @@ export const Add: React.FC<props> = (props) => {
         <form
           onSubmit={(e) => {
             e.preventDefault();
+            alert("added user");
+            navigate("/");
             post();
           }}
         >

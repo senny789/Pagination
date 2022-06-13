@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import {
   Box,
   Input,
@@ -31,6 +31,7 @@ export const Edit: React.FC<props> = (props) => {
   const [edit, setEdit] = useState<boolean>(false);
   const { id } = useParams();
   const [paramsError, setError] = useState(false);
+  const navigate = useNavigate();
   //
   console.log(paramsError);
   const handleChange = (e: any) => {
@@ -71,8 +72,14 @@ export const Edit: React.FC<props> = (props) => {
     fetch("http://localhost:4000/users/" + id, {
       method: "DELETE",
     })
-      .then((res) => res.text()) // or res.json()
-      .then((res) => console.log(res));
+      .then((res) => {
+        res.text();
+      }) // or res.json()
+      .then((res) => {
+        alert("deleted user");
+        navigate("/");
+        console.log(res);
+      });
   };
 
   return (

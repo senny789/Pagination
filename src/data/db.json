@@ -12,17 +12,6 @@
       "phone": "(775)976-6794 x41206"
     },
     {
-      "id": 10,
-      "name": "Clementina DuBuque",
-      "username": "Moriah.Stanton",
-      "email": "Rey.Padberg@karina.biz",
-      "address": {
-        "street": "Kattie Turnpike",
-        "city": "Lebsackbury"
-      },
-      "phone": "024-648-3804"
-    },
-    {
       "username": "aas",
       "name": "dasds",
       "address": {
@@ -51,6 +40,16 @@
       },
       "email": "seen@gmail.com",
       "id": 17
+    },
+    {
+      "username": "senny",
+      "name": "dadads",
+      "address": {
+        "city": "asdasdasd",
+        "street": "asdasdasd"
+      },
+      "email": "asdasd@gmail.com",
+      "id": 18
     }
   ]
 }
