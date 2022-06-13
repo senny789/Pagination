@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Text, Image, Flex, Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-interface props {
+interface props {//props ko p thulko huna parcha mero 
   id: 1;
   name: string;
   username: string;
