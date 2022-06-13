@@ -37,7 +37,7 @@ export const Home: React.FC<props> = (props) => {
         </Flex>
         <Box>
           <Flex placeItems="center">
-            {props.userRender.length > 1 ? props.userRender : ""}
+            {props.userRender.length >= 1 ? props.userRender : ""}
           </Flex>
         </Box>
         <Box marginLeft="30rem" paddingBlock="5rem">

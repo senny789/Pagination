@@ -33,7 +33,6 @@ export const Edit: React.FC<props> = (props) => {
   const [paramsError, setError] = useState(false);
   const navigate = useNavigate();
   //
-  console.log(paramsError);
   const handleChange = (e: any) => {
     let name = e.target.name;
     let value = e.target.value;
@@ -64,6 +63,8 @@ export const Edit: React.FC<props> = (props) => {
       fetch("http://localhost:4000/users/" + id)
         .then((res) => res.json())
         .then((data) => {
+          delete data["id"];
+          console.log(data);
           setFormData(data);
         });
     }
@@ -81,7 +82,23 @@ export const Edit: React.FC<props> = (props) => {
         console.log(res);
       });
   };
-
+  const handleSubmit = async () => {
+    console.log("submitted");
+    fetch(`http://localhost:4000/users/` + id, {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      method: "PUT",
+      body: JSON.stringify(formData),
+    })
+      .then(function (res) {
+        console.log(res);
+      })
+      .catch(function (res) {
+        console.log(res);
+      });
+  };
   return (
     <Box>
       {paramsError ? (
@@ -118,7 +135,7 @@ export const Edit: React.FC<props> = (props) => {
                 <form
                   onSubmit={(e) => {
                     e.preventDefault();
-                    // post();
+                    handleSubmit();
                   }}
                 >
                   <FormLabel htmlFor="username">Enter Username</FormLabel>

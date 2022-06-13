@@ -28,7 +28,7 @@ export const Users: React.FC<Partial<props>> = (props) => {
       padding="1em"
       _hover={{
         backgroundColor: "gray.100",
-        boxShadow: "1em 1em 1em  black",
+        boxShadow: "0.4em 0.4em 1em  black",
       }}
     >
       <Link to={link}>
