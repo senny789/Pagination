@@ -17,7 +17,7 @@ export const Users: React.FC<Partial<props>> = (props) => {
   const link = `/Edit/${props.id}`;
   return (
     <Box
-      h="40vh"
+      h="50vh"
       w="35%"
       placeItems="center"
       backgroundColor="white"
