@@ -17,7 +17,6 @@ export const Users: React.FC<Partial<props>> = (props) => {
   const link = `/Edit/${props.id}`;
   return (
     <Box
-      h="50vh"
       w="35%"
       placeItems="center"
       backgroundColor="white"
@@ -32,7 +31,7 @@ export const Users: React.FC<Partial<props>> = (props) => {
       }}
     >
       <Link to={link}>
-        <Flex placeItems="center" direction="column">
+        <Flex placeItems="center" direction="column" mb="4em">
           <Image src={image} borderRadius="50%" marginBottom="0.5em"></Image>
           <Box color="gray.500">
             <Text>{props.name}</Text>
